@@ -1,14 +1,19 @@
 {
   "expo": {
-    "name": "jp-writing",
-    "slug": "jp-writing",
+    "name": "Kakikomi",
+    "slug": "kakikomi",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "jpwriting",
-    "userInterfaceStyle": "automatic",
+    "scheme": "kakikomi",
+    "userInterfaceStyle": "light",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.erige005.kakikomi",
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +22,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.erige005.kakikomi"
     },
     "web": {
       "output": "server",
@@ -28,9 +34,15 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#F6F3EC",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Kakikomi dùng micro để chuyển giọng nói tiếng Nhật của bạn thành chữ."
         }
       ]
     ],
