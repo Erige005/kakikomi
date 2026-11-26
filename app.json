@@ -12,7 +12,11 @@
       "bundleIdentifier": "com.erige005.kakikomi",
       "supportsTablet": true,
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        },
+        "NSLocalNetworkUsageDescription": "Kakikomi kết nối tới máy chủ Kakikomi chạy trên Mac của bạn trong cùng mạng Wi‑Fi."
       }
     },
     "android": {
@@ -30,7 +34,12 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "origin": "http://Nguyens-MacBook-Air.local:8090"
+        }
+      ],
       [
         "expo-splash-screen",
         {
